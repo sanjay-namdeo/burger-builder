@@ -2,7 +2,7 @@ sudo: required
 services:
   - docker
 
-before_build:
+before_install:
   - docker build -t sanjaynamdeo/frontend -f Dockerfile.dev .
 
 script:
