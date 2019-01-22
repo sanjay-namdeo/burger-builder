@@ -1,6 +1,9 @@
 sudo: required
-services: docker
+services:
+  - docker
 
-before_build: docker build -t sanjaynamdeo/frontend -f Dockerfile.dev .
+before_build:
+  - docker build -t sanjaynamdeo/frontend -f Dockerfile.dev .
 
-script: docker run sanjaynamdeo/frontend npm run test -- --coverage
+script:
+  - docker run sanjaynamdeo/frontend npm run test -- --coverage
