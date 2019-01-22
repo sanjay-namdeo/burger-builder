@@ -11,6 +11,9 @@ const ingredients = [
 
 const BuildControls = props => (
   <div className={classes.BuildControls}>
+    <p>
+      Total Price: <strong>{props.totalPrice}</strong>
+    </p>
     {ingredients.map(ingredient => {
       return (
         <BuildControl
