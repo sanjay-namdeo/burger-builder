@@ -10,6 +10,7 @@ const orderSummary = props => {
   });
   return (
     <>
+      <h3>Here is your order!</h3>
       <p>Your delicious burder is ready!</p>
       <ul>{ingredientsList}</ul>
     </>
