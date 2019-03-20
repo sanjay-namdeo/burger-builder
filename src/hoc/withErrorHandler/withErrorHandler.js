@@ -19,8 +19,8 @@ const withErrorHandler = (WrappedComponent, axios) => {
         }
 
         componentWillUnmount() {
-            axios.request.interceptors.eject(this.requestInterceptor);
-            axios.response.interceptors.eject(this.responseInterceptor);
+            axios.interceptors.request.eject(this.requestInterceptor);
+            axios.interceptors.response.eject(this.responseInterceptor);
         }
 
         closeBackdropHandler = () => {
